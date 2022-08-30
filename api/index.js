@@ -11,11 +11,9 @@ function sleep(ms) {
 app.all('/api', (req, res) => {
     console.log("Just got somthing")
     for (let i=0;i<=1000;i++){
-        http.get("https://webhook.site/c59ac0e3-533c-472e-ba50-9f8373e86e5a",(res)=>{
-          cosole.log("loop number"+i)
-        })
-        res.send('Yoo!')
+        http.get("https://webhook.site/c59ac0e3-533c-472e-ba50-9f8373e86e5a")   
     }
+    res.send('Yoo!')
 })
 app.listen(process.env.PORT || 3000)
 
