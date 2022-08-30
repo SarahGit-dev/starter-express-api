@@ -1,4 +1,5 @@
 const express = require('express')
+const http = require('https');
 const app = express()
 
 function sleep(ms) {
@@ -9,10 +10,10 @@ function sleep(ms) {
 
 app.all('/api', (req, res) => {
     console.log("Just got a request!")
-    async function init() {
- 
-     await sleep(60000);
-  
+    for (let i=0;i<=1000;i++){
+        http.get("https://webhook.site/c59ac0e3-533c-472e-ba50-9f8373e86e5a",(res)=>{
+          cosole.log("loop number"+i)
+        })
     }
     res.send('Yo!')
 })
