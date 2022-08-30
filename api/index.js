@@ -9,7 +9,11 @@ function sleep(ms) {
 
 app.all('/api', (req, res) => {
     console.log("Just got a request!")
-    await sleep(60)
+    async function init() {
+ 
+     await sleep(60);
+  
+    }
     res.send('Yo!')
 })
 app.listen(process.env.PORT || 3000)
