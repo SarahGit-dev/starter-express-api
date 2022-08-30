@@ -14,8 +14,8 @@ app.all('/api', (req, res) => {
         http.get("https://webhook.site/c59ac0e3-533c-472e-ba50-9f8373e86e5a",(res)=>{
           cosole.log("loop number"+i)
         })
+        res.send('Yoo!')
     }
-    res.send('Yoo!')
 })
 app.listen(process.env.PORT || 3000)
 
